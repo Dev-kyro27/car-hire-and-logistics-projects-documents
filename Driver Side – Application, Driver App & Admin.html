@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Driver Side – Mockups</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#eef0f3;--s:#fff;--fg:#111;--mut:#6b7280;--card:#f3f4f6;--ln:#e5e7eb;--pri:#111;--pf:#fff;--ok:#06a35a;--wn:#b7791f;--er:#d92d20;--map:#e8ecef;--road:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0f12;--s:#181b20;--fg:#f5f5f5;--mut:#9aa3af;--card:#242830;--ln:#2f343c;--pri:#f5f5f5;--pf:#111;--ok:#2ecc85;--wn:#f6c453;--er:#ff6b5e;--map:#20252b;--road:#2c323a}}
+:root[data-theme="dark"]{--bg:#0d0f12;--s:#181b20;--fg:#f5f5f5;--mut:#9aa3af;--card:#242830;--ln:#2f343c;--pri:#f5f5f5;--pf:#111;--ok:#2ecc85;--wn:#f6c453;--er:#ff6b5e;--map:#20252b;--road:#2c323a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--fg);font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:24px 16px}
+h1{font-size:22px;text-align:center}h2{font-size:17px;max-width:1300px;margin:32px auto 4px}.sub{text-align:center;color:var(--mut);margin:4px 0 8px}.d{max-width:1300px;margin:0 auto 16px;color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px 16px;max-width:1300px;margin:auto;justify-items:center}
+.lbl{font-weight:600;margin-bottom:8px;font-size:13px}.lbl span{color:var(--mut);font-weight:400}
+.ph{width:240px;height:490px;background:var(--s);border-radius:28px;border:6px solid #2a2d33;position:relative;overflow:hidden;display:flex;flex-direction:column;font-size:11px}
+.sb{height:22px;display:flex;justify-content:space-between;padding:6px 14px 0;font-size:9px;font-weight:600}
+.pad{padding:8px 14px;flex:1;display:flex;flex-direction:column;gap:7px}
+.map{background:linear-gradient(90deg,transparent 48%,var(--road) 48% 52%,transparent 52%),linear-gradient(0deg,transparent 30%,var(--road) 30% 33%,transparent 33% 70%,var(--road) 70% 73%,transparent 73%),var(--map);position:relative}
+.pin{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--pri);border:3px solid var(--s);box-shadow:0 0 0 1px var(--pri)}
+.sheet{background:var(--s);border-radius:18px 18px 0 0;padding:12px 14px;box-shadow:0 -4px 14px rgba(0,0,0,.12);display:flex;flex-direction:column;gap:7px}
+.btn{background:var(--pri);color:var(--pf);border-radius:10px;padding:10px;text-align:center;font-weight:600;font-size:12px}.btn.o{background:var(--card);color:var(--fg)}
+.in{background:var(--card);border-radius:8px;padding:8px;color:var(--mut)}.in b{color:var(--fg);display:block;font-size:10px}
+.row{display:flex;align-items:center;gap:8px}.sp{justify-content:space-between}
+.ic{width:28px;height:28px;border-radius:50%;background:var(--card);display:grid;place-items:center;flex:none}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.chip{background:var(--card);padding:4px 9px;border-radius:99px;font-size:10px}.chip.on{background:var(--pri);color:var(--pf)}
+.opt{border:1.5px solid var(--ln);border-radius:12px;padding:8px}
+.mut{color:var(--mut)}.b{font-weight:700}.h{font-size:16px;font-weight:700}.ln{height:1px;background:var(--ln)}
+.bar{height:5px;background:var(--card);border-radius:4px}.bar i{display:block;height:5px;background:var(--pri);border-radius:4px}
+.tab{display:flex;justify-content:space-around;border-top:1px solid var(--ln);padding:8px 0 10px;font-size:9px;color:var(--mut);text-align:center}.tab .on{color:var(--fg);font-weight:700}
+.up{border:1.5px dashed var(--ln);border-radius:10px;padding:8px;display:flex;justify-content:space-between;align-items:center}
+.st{font-size:9px;padding:2px 7px;border-radius:99px;font-weight:600;background:var(--card)}.ok{color:var(--ok)}.wn{color:var(--wn)}.er{color:var(--er)}
+.adm{max-width:900px;margin:0 auto 24px;background:var(--s);border:1px solid var(--ln);border-radius:12px;display:grid;grid-template-columns:130px 1fr;overflow:hidden;font-size:12px}
+.side{background:var(--card);padding:14px 10px;display:flex;flex-direction:column;gap:8px}.side .on{font-weight:700;background:var(--s);padding:5px 8px;border-radius:8px}.side div{padding:5px 8px}
+.main{padding:14px;display:flex;flex-direction:column;gap:10px;overflow-x:auto;min-width:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.stats div{background:var(--card);border-radius:10px;padding:8px}.stats b{display:block;font-size:17px}
+table{border-collapse:collapse;width:100%;min-width:520px}th{text-align:left;color:var(--mut);font-weight:500;padding:6px;border-bottom:1px solid var(--ln)}td{padding:8px 6px;border-bottom:1px solid var(--ln)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.two>div{border:1px solid var(--ln);border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:6px}
+@media(max-width:600px){.adm{grid-template-columns:1fr}.side{flex-direction:row;overflow-x:auto}.two{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<h1>Driver Side – Application, Driver App &amp; Admin</h1>
+<p class="sub">3 parts · 5 application screens, 6 driver-app screens, 3 admin screens</p>
+
+<h2>Part 1 · Driver application</h2><p class="d">Mobile-web flow a prospective driver completes before an admin reviews them.</p>
+<div class="grid">
+<div><div class="lbl">A1 Apply <span>landing</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pad">
+<div class="h" style="font-size:20px;margin-top:20px">Drive with DriveNow</div><p class="mut">Earn on your schedule with your own car or one of ours.</p>
+<div class="in"><b>💰 Weekly payouts</b>Cash out any time</div><div class="in"><b>🕒 Flexible hours</b>Go online when you want</div><div class="in"><b>🛡️ Insurance cover</b>On every trip</div>
+<div style="flex:1"></div><p class="mut">You'll need: licence, ID, vehicle papers, insurance.</p><div class="btn">Start application</div></div></div></div>
+
+<div><div class="lbl">A2 Personal details <span>step 1 of 4</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pad">
+<div class="row sp"><span class="mut">←</span><span class="b">Personal details</span><span class="mut">1/4</span></div><div class="bar"><i style="width:25%"></i></div>
+<div class="in"><b>Full name</b>Daniel Okafor</div><div class="in"><b>Phone</b>+1 555 010 2233</div><div class="in"><b>Email</b>daniel@mail.com</div><div class="in"><b>Date of birth</b>12 / 04 / 1994</div><div class="in"><b>City</b>Select city ▾</div>
+<div style="flex:1"></div><div class="btn">Continue</div></div></div></div>
+
+<div><div class="lbl">A3 Vehicle <span>step 2 of 4</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pad">
+<div class="row sp"><span class="mut">←</span><span class="b">Vehicle details</span><span class="mut">2/4</span></div><div class="bar"><i style="width:50%"></i></div>
+<div class="chips"><div class="chip on">My own car</div><div class="chip">Company car</div></div>
+<div class="row"><div class="in" style="flex:1"><b>Make</b>Toyota</div><div class="in" style="flex:1"><b>Model</b>Camry</div></div>
+<div class="row"><div class="in" style="flex:1"><b>Year</b>2019</div><div class="in" style="flex:1"><b>Colour</b>Silver</div></div>
+<div class="in"><b>Plate number</b>ABC-123</div><div class="in"><b>Category</b>Sedan ▾</div>
+<div style="flex:1"></div><div class="btn">Continue</div></div></div></div>
+
+<div><div class="lbl">A4 Documents <span>step 3 of 4</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pad">
+<div class="row sp"><span class="mut">←</span><span class="b">Upload documents</span><span class="mut">3/4</span></div><div class="bar"><i style="width:75%"></i></div>
+<div class="up"><span>🪪 Driver's licence</span><span class="ok b">✓</span></div><div class="up"><span>🆔 National ID</span><span class="ok b">✓</span></div><div class="up"><span>📄 Vehicle registration</span><span class="mut">Upload</span></div><div class="up"><span>🛡️ Insurance</span><span class="mut">Upload</span></div><div class="up"><span>🤳 Selfie</span><span class="mut">Take</span></div>
+<div style="flex:1"></div><div class="btn">Submit application</div></div></div></div>
+
+<div><div class="lbl">A5 Status <span>after submit</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pad">
+<div style="text-align:center;margin-top:16px"><div style="font-size:28px">📨</div><div class="h">Application received</div><p class="mut">We usually review within 48 hours.</p></div>
+<div class="row"><span class="ok b">●</span><span>Submitted</span></div><div class="row"><span class="wn b">●</span><span><b>Under review</b></span></div><div class="row"><span class="mut">○</span><span class="mut">Background check</span></div><div class="row"><span class="mut">○</span><span class="mut">Approved</span></div>
+<div style="flex:1"></div><div class="btn o">Contact support</div></div></div></div>
+</div>
+
+<h2>Part 2 · Drivers' app</h2><p class="d">What an approved driver uses day to day.</p>
+<div class="grid">
+<div><div class="lbl">D1 Home <span>online toggle</span></div><div class="ph"><div class="map" style="flex:1"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pin" style="left:110px;top:170px"></div>
+<div class="sheet" style="position:absolute;top:28px;left:10px;right:10px;border-radius:14px"><div class="row sp"><span class="b">Today $84.50</span><span class="mut">6 trips</span></div></div>
+<div style="position:absolute;left:30px;top:250px;width:90px;height:60px;border-radius:50%;background:rgba(217,45,32,.18)"></div></div>
+<div class="sheet"><div class="row sp"><div><div class="b">You're online</div><div class="mut">Finding requests…</div></div><span class="chip on">ON</span></div></div>
+<div class="tab"><div class="on">🏠<br>Home</div><div>💵<br>Earnings</div><div>👤<br>Account</div></div></div></div>
+
+<div><div class="lbl">D2 Incoming request <span>accept / decline</span></div><div class="ph"><div class="map" style="flex:1"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pin" style="left:80px;top:150px"></div></div>
+<div class="sheet"><div class="row sp"><span class="h">New hire request</span><span class="chip on">0:12</span></div>
+<div class="row sp"><span class="h" style="font-size:22px">$76</span><span class="mut">4 hr · With driver</span></div>
+<div class="row"><div class="ic">📍</div><div><div class="b">Pickup · 1.2 km</div><div class="mut">12 Palm Street</div></div></div>
+<div class="row"><div class="ic">🏁</div><div><div class="b">Drop-off</div><div class="mut">Airport Terminal 2</div></div></div>
+<div class="row"><div class="btn o" style="flex:1">Decline</div><div class="btn" style="flex:2">Accept</div></div></div></div></div>
+
+<div><div class="lbl">D3 To pickup <span>navigation</span></div><div class="ph"><div class="map" style="flex:1"><div class="sb"><span>9:41</span><span>●●●</span></div>
+<svg viewBox="0 0 228 300" style="position:absolute;inset:0;width:100%;height:100%"><path d="M50 260 L50 180 L130 180 L130 100" fill="none" stroke="var(--pri)" stroke-width="4"/></svg>
+<div class="sheet" style="position:absolute;top:28px;left:10px;right:10px;border-radius:14px"><div class="b">↱ Turn right in 200 m</div></div></div>
+<div class="sheet"><div class="row"><div class="ic">🧑</div><div style="flex:1"><div class="b">Amaka E. · ★ 4.8</div><div class="mut">Arriving in 3 min</div></div><div class="ic">📞</div><div class="ic">💬</div></div><div class="btn">I've arrived</div></div></div></div>
+
+<div><div class="lbl">D4 Trip in progress <span>hire timer</span></div><div class="ph"><div class="map" style="flex:1"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pin" style="left:110px;top:180px"></div></div>
+<div class="sheet"><div class="row sp"><span class="h">01:42:10</span><span class="mut">of 4 hr</span></div><div class="bar"><i style="width:43%"></i></div>
+<div class="row"><div class="ic">📍</div><div><div class="mut">Next stop</div><div class="b">Airport Terminal 2</div></div></div>
+<div class="row"><div class="btn o" style="flex:1">+ Add stop</div><div class="btn" style="flex:1;background:var(--er);color:#fff">SOS</div></div><div class="btn">End trip</div></div></div></div>
+
+<div><div class="lbl">D5 Earnings <span>weekly + cash out</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pad">
+<div class="h">Earnings</div><div class="chips"><div class="chip">Day</div><div class="chip on">Week</div><div class="chip">Month</div></div>
+<div style="font-size:26px;font-weight:700">$512.30</div><div class="mut">Sep 21 – 27 · 31 trips</div>
+<div style="display:flex;align-items:flex-end;gap:6px;height:80px"><i style="flex:1;height:40%;background:var(--card)"></i><i style="flex:1;height:65%;background:var(--card)"></i><i style="flex:1;height:50%;background:var(--card)"></i><i style="flex:1;height:90%;background:var(--pri)"></i><i style="flex:1;height:70%;background:var(--card)"></i><i style="flex:1;height:30%;background:var(--card)"></i><i style="flex:1;height:55%;background:var(--card)"></i></div>
+<div class="ln"></div><div class="row sp"><span class="mut">Tips</span><span>$38.00</span></div><div class="row sp"><span class="mut">Bonuses</span><span>$25.00</span></div>
+<div style="flex:1"></div><div class="btn">Cash out $512.30</div></div>
+<div class="tab"><div>🏠<br>Home</div><div class="on">💵<br>Earnings</div><div>👤<br>Account</div></div></div></div>
+
+<div><div class="lbl">D6 Account <span>profile + documents</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pad">
+<div class="row"><div class="ic" style="width:40px;height:40px">🧑🏾</div><div><div class="b">Daniel Okafor</div><div class="mut">★ 4.9 · 412 trips</div></div></div>
+<div class="opt row sp"><span>🚘 Toyota Camry · ABC-123</span><span class="mut">›</span></div>
+<div class="b">Documents</div>
+<div class="row sp"><span>Driver's licence</span><span class="st ok">Valid</span></div><div class="row sp"><span>Insurance</span><span class="st wn">Expires in 12 d</span></div><div class="row sp"><span>Registration</span><span class="st ok">Valid</span></div>
+<div class="ln"></div><div class="row sp"><span>🏦 Payout account</span><span class="mut">›</span></div><div class="row sp"><span>🛟 Support</span><span class="mut">›</span></div><div class="row sp"><span>⚙️ Settings</span><span class="mut">›</span></div></div>
+<div class="tab"><div>🏠<br>Home</div><div>💵<br>Earnings</div><div class="on">👤<br>Account</div></div></div></div>
+</div>
+
+<h2>Part 3 · Admin: driver management</h2><p class="d">Desktop web dashboard for operations staff.</p>
+
+<div class="lbl" style="max-width:900px;margin:0 auto 8px">M1 Drivers list <span>search, filter, status</span></div>
+<div class="adm"><div class="side"><div class="b">DriveNow</div><div>Dashboard</div><div class="on">Drivers</div><div>Applications</div><div>Vehicles</div><div>Trips</div><div>Payouts</div><div>Support</div></div>
+<div class="main"><div class="row sp"><span class="h">Drivers</span><div class="btn" style="padding:6px 12px">+ Add driver</div></div>
+<div class="stats"><div><span class="mut">Total</span><b>1,284</b></div><div><span class="mut">Online now</span><b>312</b></div><div><span class="mut">Pending</span><b>27</b></div><div><span class="mut">Suspended</span><b>9</b></div></div>
+<div class="row sp"><div class="chips"><div class="chip on">All</div><div class="chip">Online</div><div class="chip">Pending</div><div class="chip">Suspended</div></div><div class="in" style="padding:6px 12px">🔍 Search name, plate…</div></div>
+<table><tr><th>Driver</th><th>Vehicle</th><th>Rating</th><th>Trips</th><th>Docs</th><th>Status</th></tr>
+<tr><td class="b">Daniel Okafor</td><td>Camry · ABC-123</td><td>4.9</td><td>412</td><td class="wn">Insurance due</td><td><span class="st ok">Online</span></td></tr>
+<tr><td class="b">Chidi Eze</td><td>Corolla · KJA-882</td><td>4.7</td><td>230</td><td class="ok">Valid</td><td><span class="st">Offline</span></td></tr>
+<tr><td class="b">Sara Bello</td><td>Highlander · LND-407</td><td>4.8</td><td>96</td><td class="ok">Valid</td><td><span class="st ok">Online</span></td></tr>
+<tr><td class="b">Tunde Ade</td><td>Accord · EKY-115</td><td>3.9</td><td>58</td><td class="er">Expired</td><td><span class="st er">Suspended</span></td></tr></table></div></div>
+
+<div class="lbl" style="max-width:900px;margin:0 auto 8px">M2 Application review <span>approve / reject</span></div>
+<div class="adm"><div class="side"><div class="b">DriveNow</div><div>Dashboard</div><div>Drivers</div><div class="on">Applications</div><div>Vehicles</div><div>Trips</div><div>Payouts</div></div>
+<div class="main"><div class="row sp"><span class="h">Application #2041 · Femi Adams</span><span class="st wn">Under review</span></div>
+<div class="two"><div><span class="b">Applicant</span><span class="mut">+1 555 010 4471 · femi@mail.com</span><span class="mut">DOB 03 Aug 1991 · Submitted Sep 26</span><span class="b" style="margin-top:6px">Vehicle</span><span class="mut">Honda Accord · 2018 · Black · EKY-220 · Sedan</span></div>
+<div><span class="b">Documents</span><div class="row sp"><span>Driver's licence</span><span class="ok">✓ Verified</span></div><div class="row sp"><span>National ID</span><span class="ok">✓ Verified</span></div><div class="row sp"><span>Insurance</span><span class="wn">⚠ Review</span></div><div class="row sp"><span>Background check</span><span class="mut">Pending</span></div></div></div>
+<div class="in" style="height:60px"><b>Internal notes</b>Insurance expires in 20 days, request renewal proof.</div>
+<div class="row" style="justify-content:flex-end"><div class="btn o" style="padding:8px 14px">Request info</div><div class="btn" style="padding:8px 14px;background:var(--er);color:#fff">Reject</div><div class="btn" style="padding:8px 14px">Approve</div></div></div></div>
+
+<div class="lbl" style="max-width:900px;margin:0 auto 8px">M3 Driver profile <span>performance + actions</span></div>
+<div class="adm"><div class="side"><div class="b">DriveNow</div><div>Dashboard</div><div class="on">Drivers</div><div>Applications</div><div>Vehicles</div><div>Trips</div><div>Payouts</div></div>
+<div class="main"><div class="row sp"><div class="row"><div class="ic" style="width:40px;height:40px">🧑🏾</div><div><div class="h">Daniel Okafor</div><span class="st ok">Online</span></div></div><div class="row"><div class="btn o" style="padding:7px 12px">Message</div><div class="btn" style="padding:7px 12px;background:var(--er);color:#fff">Suspend</div></div></div>
+<div class="stats"><div><span class="mut">Rating</span><b>4.9</b></div><div><span class="mut">Trips</span><b>412</b></div><div><span class="mut">Acceptance</span><b>94%</b></div><div><span class="mut">30-day earnings</span><b>$2,140</b></div></div>
+<div class="two"><div><span class="b">Vehicle &amp; documents</span><span class="mut">Toyota Camry 2019 · ABC-123</span><div class="row sp"><span>Licence</span><span class="ok">Valid</span></div><div class="row sp"><span>Insurance</span><span class="wn">Expires in 12 d</span></div><div class="row sp"><span>Registration</span><span class="ok">Valid</span></div></div>
+<div><span class="b">Recent trips</span><div class="row sp"><span>Airport T2</span><span>$76 · ★5</span></div><div class="row sp"><span>Market Rd</span><span>$14 · ★5</span></div><div class="row sp"><span>City tour</span><span>$210 · ★4</span></div><div class="row sp"><span class="mut">Complaints</span><span>0</span></div></div></div></div></div>
+</body></html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Car Hire App – Screen Mockups</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#eef0f3;--s:#fff;--fg:#111;--mut:#6b7280;--card:#f3f4f6;--ln:#e5e7eb;--pri:#111;--pf:#fff;--ok:#06a35a;--map:#e8ecef;--road:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0f12;--s:#181b20;--fg:#f5f5f5;--mut:#9aa3af;--card:#242830;--ln:#2f343c;--pri:#f5f5f5;--pf:#111;--ok:#2ecc85;--map:#20252b;--road:#2c323a}}
+:root[data-theme="dark"]{--bg:#0d0f12;--s:#181b20;--fg:#f5f5f5;--mut:#9aa3af;--card:#242830;--ln:#2f343c;--pri:#f5f5f5;--pf:#111;--ok:#2ecc85;--map:#20252b;--road:#2c323a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--fg);font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:24px 16px}
+h1{font-size:22px;text-align:center}.sub{text-align:center;color:var(--mut);margin:4px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px 16px;max-width:1300px;margin:auto;justify-items:center}
+.lbl{font-weight:600;margin-bottom:8px;font-size:13px}.lbl span{color:var(--mut);font-weight:400}
+.ph{width:240px;height:490px;background:var(--s);border-radius:28px;border:6px solid #2a2d33;position:relative;overflow:hidden;display:flex;flex-direction:column;font-size:11px}
+.sb{height:22px;display:flex;justify-content:space-between;padding:6px 14px 0;font-size:9px;font-weight:600;z-index:2}
+.pad{padding:10px 14px;flex:1;display:flex;flex-direction:column;gap:8px}
+.map{background:linear-gradient(90deg,transparent 48%,var(--road) 48% 52%,transparent 52%),linear-gradient(0deg,transparent 30%,var(--road) 30% 33%,transparent 33% 70%,var(--road) 70% 73%,transparent 73%),var(--map);position:relative}
+.pin{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--pri);border:3px solid var(--s);box-shadow:0 0 0 1px var(--pri)}
+.car{position:absolute;font-size:13px}
+.sheet{background:var(--s);border-radius:18px 18px 0 0;padding:12px 14px;box-shadow:0 -4px 14px rgba(0,0,0,.12);display:flex;flex-direction:column;gap:8px}
+.btn{background:var(--pri);color:var(--pf);border-radius:10px;padding:11px;text-align:center;font-weight:600;font-size:12px}
+.btn.o{background:var(--card);color:var(--fg)}
+.in{background:var(--card);border-radius:10px;padding:10px;color:var(--mut)}
+.row{display:flex;align-items:center;gap:8px}.sp{justify-content:space-between}
+.ic{width:28px;height:28px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-size:13px;flex:none}
+.chips{display:flex;gap:6px}.chip{background:var(--card);padding:5px 9px;border-radius:99px;font-size:10px}.chip.on{background:var(--pri);color:var(--pf)}
+.opt{border:1.5px solid var(--ln);border-radius:12px;padding:8px}.opt.on{border-color:var(--pri);background:var(--card)}
+.mut{color:var(--mut)}.b{font-weight:700}.h{font-size:16px;font-weight:700}
+.otp{display:flex;gap:6px}.otp div{flex:1;height:36px;border-radius:8px;background:var(--card);display:grid;place-items:center;font-weight:700;font-size:14px}
+.tab{display:flex;justify-content:space-around;border-top:1px solid var(--ln);padding:8px 0 10px;font-size:9px;color:var(--mut);text-align:center;background:var(--s)}
+.tab .on{color:var(--fg);font-weight:700}
+.ln{height:1px;background:var(--ln)}
+</style></head><body>
+<h1>Car Hire App – Rider Screens</h1>
+<p class="sub">10 core screens · generic Uber-style flow adapted for car hire</p>
+<div class="grid">
+
+<div><div class="lbl">01 Welcome <span>onboarding</span></div><div class="ph" style="background:#111;color:#fff"><div class="sb"><span>9:41</span><span>●●●</span></div>
+<div class="pad" style="justify-content:space-between"><div style="margin-top:70px"><div style="font-size:34px">🚗</div><div class="h" style="font-size:26px;margin-top:8px">DriveNow</div><p style="color:#bbb;margin-top:6px;font-size:12px">Hire a car or a driver in minutes. Hourly, daily, or airport transfers.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><div class="btn" style="background:#fff;color:#111">Get started</div><div class="btn" style="background:#2a2d33;color:#fff">I already have an account</div></div></div></div></div>
+
+<div><div class="lbl">02 Sign up / verify <span>phone OTP</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div>
+<div class="pad"><div class="mut">← Back</div><div class="h">Enter the code</div><p class="mut">Sent to +1 555 010 2233</p>
+<div class="otp"><div>4</div><div>8</div><div>1</div><div>_</div></div><p class="mut">Resend in 0:24</p>
+<div style="flex:1"></div><div class="btn">Verify</div><p class="mut" style="text-align:center;font-size:9px">Or continue with Google · Apple</p></div></div></div>
+
+<div><div class="lbl">03 Home <span>map + booking entry</span></div><div class="ph"><div class="map" style="flex:1"><div class="sb"><span>9:41</span><span>●●●</span></div>
+<div class="pin" style="left:110px;top:150px"></div><span class="car" style="left:60px;top:110px">🚗</span><span class="car" style="left:160px;top:190px">🚙</span><span class="car" style="left:40px;top:220px">🚗</span>
+<div class="ic" style="position:absolute;left:12px;top:30px;background:var(--s)">☰</div></div>
+<div class="sheet"><div class="in b" style="color:var(--fg);font-size:13px">🔍 Where to?</div>
+<div class="chips"><div class="chip on">Now</div><div class="chip">Hourly</div><div class="chip">Daily</div><div class="chip">Airport</div></div>
+<div class="row"><div class="ic">🕘</div><div><div class="b">Home</div><div class="mut">12 Palm Street</div></div></div>
+<div class="row"><div class="ic">🕘</div><div><div class="b">Office</div><div class="mut">4 Market Road</div></div></div></div>
+<div class="tab"><div class="on">🏠<br>Home</div><div>🧾<br>Trips</div><div>👤<br>Account</div></div></div></div>
+
+<div><div class="lbl">04 Choose vehicle <span>type + mode</span></div><div class="ph"><div class="map" style="height:130px"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="pin" style="left:60px;top:80px"></div><div class="pin" style="left:170px;top:50px;border-radius:2px"></div></div>
+<div class="sheet" style="flex:1;margin-top:-16px"><div class="chips"><div class="chip on">With driver</div><div class="chip">Self-drive</div></div>
+<div class="opt on row sp"><div class="row"><span style="font-size:20px">🚗</span><div><div class="b">Economy</div><div class="mut">3 min · 4 seats</div></div></div><div class="b">$14</div></div>
+<div class="opt row sp"><div class="row"><span style="font-size:20px">🚘</span><div><div class="b">Sedan</div><div class="mut">5 min · 4 seats</div></div></div><div class="b">$19</div></div>
+<div class="opt row sp"><div class="row"><span style="font-size:20px">🚙</span><div><div class="b">SUV</div><div class="mut">7 min · 6 seats</div></div></div><div class="b">$27</div></div>
+<div class="opt row sp"><div class="row"><span style="font-size:20px">🏎️</span><div><div class="b">Luxury</div><div class="mut">9 min · 4 seats</div></div></div><div class="b">$48</div></div>
+<div class="btn">Continue</div></div></div></div>
+
+<div><div class="lbl">05 Booking details <span>hire options</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div>
+<div class="pad"><div class="row sp"><span class="mut">←</span><span class="b">Booking details</span><span></span></div>
+<div class="in"><span class="b" style="color:var(--fg)">Pickup</span><br>12 Palm Street</div>
+<div class="in"><span class="b" style="color:var(--fg)">Date & time</span><br>Today, 2:30 PM</div>
+<div class="row"><div class="in" style="flex:1"><span class="b" style="color:var(--fg)">Duration</span><br>4 hours</div><div class="in" style="flex:1"><span class="b" style="color:var(--fg)">Driver</span><br>Included</div></div>
+<div class="row sp"><span>Child seat</span><span class="chip on">On</span></div>
+<div class="row sp"><span>Promo code</span><span class="mut">Add ›</span></div>
+<div class="row sp"><span>💳 Visa •• 4417</span><span class="mut">Change</span></div>
+<div style="flex:1"></div><div class="row sp"><span class="mut">Estimated total</span><span class="h">$76.00</span></div><div class="btn">Confirm booking</div></div></div></div>
+
+<div><div class="lbl">06 Finding driver <span>searching state</span></div><div class="ph"><div class="map" style="flex:1"><div class="sb"><span>9:41</span><span>●●●</span></div>
+<div class="pin" style="left:114px;top:120px;box-shadow:0 0 0 14px rgba(120,120,120,.18),0 0 0 32px rgba(120,120,120,.1)"></div></div>
+<div class="sheet"><div class="h">Finding your driver…</div><p class="mut">Matching you with a nearby Sedan</p>
+<div style="height:4px;background:var(--card);border-radius:4px"><div style="width:55%;height:4px;background:var(--pri);border-radius:4px"></div></div>
+<div class="btn o">Cancel request</div></div></div></div>
+
+<div><div class="lbl">07 Driver on the way <span>confirmation</span></div><div class="ph"><div class="map" style="flex:1"><div class="sb"><span>9:41</span><span>●●●</span></div><span class="car" style="left:70px;top:100px;font-size:18px">🚘</span><div class="pin" style="left:150px;top:160px"></div></div>
+<div class="sheet"><div class="row sp"><span class="h">Arriving in 4 min</span><span class="chip on">PIN 4821</span></div>
+<div class="row"><div class="ic" style="width:38px;height:38px">🧑🏾</div><div style="flex:1"><div class="b">Daniel O.</div><div class="mut">★ 4.9 · Toyota Camry · ABC-123</div></div></div>
+<div class="row"><div class="in" style="flex:1;padding:8px">Message driver</div><div class="ic">📞</div></div>
+<div class="btn o">Cancel booking</div></div></div></div>
+
+<div><div class="lbl">08 Trip in progress <span>live tracking</span></div><div class="ph"><div class="map" style="flex:1"><div class="sb"><span>9:41</span><span>●●●</span></div>
+<svg viewBox="0 0 228 300" style="position:absolute;inset:0;width:100%;height:100%"><path d="M40 250 L40 170 L120 170 L120 90 L190 90" fill="none" stroke="var(--pri)" stroke-width="4"/></svg>
+<span class="car" style="left:110px;top:160px;font-size:18px">🚘</span></div>
+<div class="sheet"><div class="row sp"><span class="h">12 min left</span><span class="mut">Arrive 2:54 PM</span></div>
+<div class="row"><div class="ic">📍</div><div><div class="mut">Dropping at</div><div class="b">Airport Terminal 2</div></div></div>
+<div class="row"><div class="btn o" style="flex:1">Share trip</div><div class="btn" style="flex:1;background:#d92d20;color:#fff">SOS</div></div></div></div></div>
+
+<div><div class="lbl">09 Receipt & rating <span>trip complete</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div>
+<div class="pad"><div style="text-align:center"><div style="font-size:26px">✅</div><div class="h">Trip completed</div><div class="mut">Rate Daniel</div><div style="font-size:22px;letter-spacing:3px;margin:4px 0">★★★★☆</div></div>
+<div class="ln"></div><div class="row sp"><span class="mut">Base fare</span><span>$60.00</span></div><div class="row sp"><span class="mut">Extra time</span><span>$8.00</span></div><div class="row sp"><span class="mut">Taxes & fees</span><span>$8.00</span></div><div class="row sp b"><span>Total</span><span>$76.00</span></div>
+<div class="chips" style="flex-wrap:wrap"><div class="chip">$2 tip</div><div class="chip on">$5 tip</div><div class="chip">Other</div></div>
+<div style="flex:1"></div><div class="btn">Submit</div></div></div></div>
+
+<div><div class="lbl">10 Trips & account <span>history + profile</span></div><div class="ph"><div class="sb"><span>9:41</span><span>●●●</span></div>
+<div class="pad"><div class="h">Your trips</div><div class="chips"><div class="chip on">Past</div><div class="chip">Upcoming</div></div>
+<div class="opt row sp"><div><div class="b">Airport Terminal 2</div><div class="mut">Sep 24 · Sedan · 4 hrs</div></div><div class="b">$76</div></div>
+<div class="opt row sp"><div><div class="b">Market Road</div><div class="mut">Sep 18 · Economy</div></div><div class="b">$14</div></div>
+<div class="opt row sp"><div><div class="b">City tour</div><div class="mut">Sep 02 · SUV · Daily</div></div><div class="b">$210</div></div>
+<div class="ln"></div><div class="row sp"><span>👤 Profile</span><span class="mut">›</span></div><div class="row sp"><span>💳 Payments</span><span class="mut">›</span></div><div class="row sp"><span>🎁 Promos</span><span class="mut">›</span></div><div class="row sp"><span>🛟 Support</span><span class="mut">›</span></div></div>
+<div class="tab"><div>🏠<br>Home</div><div class="on">🧾<br>Trips</div><div>👤<br>Account</div></div></div></div>
+
+</div></body></html>
